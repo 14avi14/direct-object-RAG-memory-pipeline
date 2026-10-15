@@ -1,0 +1,15 @@
+__pycache__/
+
+env/
+
+.env
+*.env
+
+# Ignore the pickle files(RAG memory) for now
+*.pkl
+
+# Model weights(automatically downloaded by ultralytics)
+*.pt 
+
+# Test videos should be ignored
+*.mp4
