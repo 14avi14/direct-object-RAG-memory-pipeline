@@ -1,17 +1,13 @@
 """memory_creation.py - populates RAG memory DB
 
 This takes in images, spatial coordinates, and timestamp data and
-stores those in a RAG-based vector DB. Groups of images are summarized
-via a VLM textually. These summarizations are embedded and stored for
-use during semantic similarity searches. The associated timestamp and
-spatial, data are fed to the vector DB to be stored as well(for
-details, check vector_store.py)
+stores those in a RAG-based vector DB. Groups of images turned into a short
+video clip which is sent to a VLM to be summarized. These summarizations
+are embedded and stored for use during semantic similarity searches. The
+associated timestamp and spatial, data are fed to the vector DB to be
+stored as well(for details, check vector_store.py)
 
 For the VLM, currently qwen 3.8 27b is being used and the API is Groq.
-
-Below, there is also the ability to feed videos. To do so,
-frames are still fed as individual images, but they will be turned into
-a short clip and sent to a video model if that is chosen.
 """
 
 import os
